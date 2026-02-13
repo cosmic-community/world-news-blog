@@ -36,6 +36,13 @@ export default function Header() {
             >
               Authors
             </Link>
+            {/* Changed: Added Contact link */}
+            <Link
+              href="/contact"
+              className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+            >
+              Contact
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -79,6 +86,14 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Authors
+            </Link>
+            {/* Changed: Added Contact link to mobile menu */}
+            <Link
+              href="/contact"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
             </Link>
           </div>
         )}

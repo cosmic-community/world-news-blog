@@ -39,6 +39,12 @@ export default function Footer() {
                   Authors
                 </Link>
               </li>
+              {/* Changed: Added Contact link to footer navigation */}
+              <li>
+                <Link href="/contact" className="text-sm hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
