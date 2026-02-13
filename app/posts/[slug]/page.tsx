@@ -45,7 +45,7 @@ export default async function PostPage({ params }: PostPageProps) {
   const relatedPosts = allPosts.filter((p) => p.id !== post.id).slice(0, 2)
 
   return (
-    <article>
+    <article className="bg-white dark:bg-gray-950">
       {/* Hero Image */}
       {featuredImage && (
         <div className="w-full h-64 md:h-96 lg:h-[500px] relative overflow-hidden bg-gray-100 dark:bg-gray-800">

@@ -37,7 +37,7 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
   const bio = author.metadata?.bio
 
   return (
-    <div>
+    <div className="bg-white dark:bg-gray-950">
       {/* Author Header */}
       <section className="bg-gray-50 dark:bg-gray-900 py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

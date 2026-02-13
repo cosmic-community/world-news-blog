@@ -29,8 +29,8 @@ export default function RootLayout({
         <ThemeScript />
         <script src="/dashboard-console-capture.js" />
       </head>
-      <body className="font-sans antialiased">
-        <div className="min-h-screen flex flex-col">
+      <body className="font-sans antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+        <div className="min-h-screen flex flex-col bg-white dark:bg-gray-950">
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

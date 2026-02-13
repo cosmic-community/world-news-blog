@@ -36,7 +36,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const bgColor = CATEGORY_COLORS[category.slug] || 'bg-gray-500'
 
   return (
-    <div>
+    <div className="bg-white dark:bg-gray-950">
       {/* Category Header */}
       <section className={`${bgColor} text-white py-16`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

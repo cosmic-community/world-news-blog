@@ -39,7 +39,7 @@ export default async function HomePage() {
 
       {/* More Stories */}
       {remainingPosts.length > 0 && (
-        <section className="py-12 lg:py-16">
+        <section className="py-12 lg:py-16 bg-white dark:bg-gray-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-8">
               <div>
