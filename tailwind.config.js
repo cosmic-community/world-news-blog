@@ -5,6 +5,17 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  safelist: [
+    'bg-category-politics',
+    'bg-category-technology',
+    'bg-category-climate',
+    'text-category-politics',
+    'text-category-technology',
+    'text-category-climate',
+    'border-category-politics',
+    'border-category-technology',
+    'border-category-climate',
+  ],
   theme: {
     extend: {
       fontFamily: {
