@@ -15,7 +15,7 @@ export default function HeroPost({ post }: HeroPostProps) {
 
   return (
     <article className="relative group">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
         {/* Image */}
         <Link href={`/posts/${post.slug}`} className="block overflow-hidden">
           {featuredImage ? (
@@ -27,7 +27,7 @@ export default function HeroPost({ post }: HeroPostProps) {
               className="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           ) : (
-            <div className="w-full h-64 lg:h-full bg-gray-100 flex items-center justify-center">
+            <div className="w-full h-64 lg:h-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
               <span className="text-6xl">📰</span>
             </div>
           )}
@@ -48,13 +48,13 @@ export default function HeroPost({ post }: HeroPostProps) {
 
           {/* Title */}
           <Link href={`/posts/${post.slug}`}>
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight group-hover:text-brand-accent transition-colors mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white leading-tight group-hover:text-brand-accent transition-colors mb-4">
               {post.title}
             </h2>
           </Link>
 
           {/* Excerpt */}
-          <p className="text-gray-600 leading-relaxed mb-6 line-clamp-3">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 line-clamp-3">
             {excerpt}
           </p>
 
@@ -74,12 +74,12 @@ export default function HeroPost({ post }: HeroPostProps) {
                     className="w-10 h-10 rounded-full object-cover"
                   />
                 ) : (
-                  <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
                     ✍️
                   </div>
                 )}
                 <div>
-                  <span className="block text-sm font-semibold text-gray-900 group-hover/author:text-brand-accent transition-colors">
+                  <span className="block text-sm font-semibold text-gray-900 dark:text-white group-hover/author:text-brand-accent transition-colors">
                     {author.metadata?.name || author.title}
                   </span>
                 </div>

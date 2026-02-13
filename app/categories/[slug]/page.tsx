@@ -75,7 +75,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             ))}
           </div>
         ) : (
-          <div className="text-center py-20 text-gray-500">
+          <div className="text-center py-20 text-gray-500 dark:text-gray-400">
             <span className="text-5xl mb-4 block">📭</span>
             <p className="text-lg">No articles in this category yet.</p>
             <Link href="/" className="text-brand-accent font-medium mt-3 inline-block hover:underline">

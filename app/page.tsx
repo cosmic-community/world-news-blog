@@ -14,14 +14,14 @@ export default async function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gray-50 py-12 lg:py-16">
+      <section className="bg-gray-50 dark:bg-gray-900 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="mb-8">
             <span className="text-brand-accent font-semibold text-sm uppercase tracking-widest">
               Latest News
             </span>
-            <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-2">
+            <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mt-2">
               Today&apos;s Top Story
             </h1>
           </div>
@@ -30,7 +30,7 @@ export default async function HomePage() {
           {heroPost ? (
             <HeroPost post={heroPost} />
           ) : (
-            <div className="text-center py-20 text-gray-500">
+            <div className="text-center py-20 text-gray-500 dark:text-gray-400">
               <p className="text-lg">No posts yet. Add some content in your Cosmic dashboard.</p>
             </div>
           )}
@@ -46,7 +46,7 @@ export default async function HomePage() {
                 <span className="text-brand-accent font-semibold text-sm uppercase tracking-widest">
                   More Stories
                 </span>
-                <h2 className="text-2xl lg:text-3xl font-extrabold text-gray-900 mt-2">
+                <h2 className="text-2xl lg:text-3xl font-extrabold text-gray-900 dark:text-white mt-2">
                   Latest Articles
                 </h2>
               </div>
@@ -63,13 +63,13 @@ export default async function HomePage() {
 
       {/* Categories Section */}
       {categories.length > 0 && (
-        <section className="bg-gray-50 py-12 lg:py-16">
+        <section className="bg-gray-50 dark:bg-gray-900 py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
               <span className="text-brand-accent font-semibold text-sm uppercase tracking-widest">
                 Explore
               </span>
-              <h2 className="text-2xl lg:text-3xl font-extrabold text-gray-900 mt-2">
+              <h2 className="text-2xl lg:text-3xl font-extrabold text-gray-900 dark:text-white mt-2">
                 Browse by Category
               </h2>
             </div>

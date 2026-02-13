@@ -14,7 +14,7 @@ export default function PostCard({ post }: PostCardProps) {
   const excerpt = content.replace(/^#.*\n\n?/gm, '').replace(/[#*>\-\[\]`]/g, '').trim().substring(0, 150) + '...'
 
   return (
-    <article className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <article className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {/* Image */}
       <Link href={`/posts/${post.slug}`} className="block overflow-hidden">
         {featuredImage ? (
@@ -26,7 +26,7 @@ export default function PostCard({ post }: PostCardProps) {
             className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
-          <div className="w-full h-52 bg-gray-100 flex items-center justify-center">
+          <div className="w-full h-52 bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
             <span className="text-4xl">📰</span>
           </div>
         )}
@@ -43,13 +43,13 @@ export default function PostCard({ post }: PostCardProps) {
 
         {/* Title */}
         <Link href={`/posts/${post.slug}`}>
-          <h3 className="text-lg font-bold text-gray-900 leading-snug group-hover:text-brand-accent transition-colors line-clamp-2 mb-2">
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-snug group-hover:text-brand-accent transition-colors line-clamp-2 mb-2">
             {post.title}
           </h3>
         </Link>
 
         {/* Excerpt */}
-        <p className="text-sm text-gray-600 leading-relaxed line-clamp-3 mb-4">
+        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-3 mb-4">
           {excerpt}
         </p>
 
@@ -68,11 +68,11 @@ export default function PostCard({ post }: PostCardProps) {
                 className="w-8 h-8 rounded-full object-cover"
               />
             ) : (
-              <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-sm">
+              <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-sm">
                 ✍️
               </div>
             )}
-            <span className="text-sm font-medium text-gray-700 group-hover/author:text-brand-accent transition-colors">
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover/author:text-brand-accent transition-colors">
               {author.metadata?.name || author.title}
             </span>
           </Link>

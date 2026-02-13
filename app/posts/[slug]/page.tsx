@@ -48,7 +48,7 @@ export default async function PostPage({ params }: PostPageProps) {
     <article>
       {/* Hero Image */}
       {featuredImage && (
-        <div className="w-full h-64 md:h-96 lg:h-[500px] relative overflow-hidden bg-gray-100">
+        <div className="w-full h-64 md:h-96 lg:h-[500px] relative overflow-hidden bg-gray-100 dark:bg-gray-800">
           <img
             src={`${featuredImage.imgix_url}?w=1600&h=900&fit=crop&auto=format,compress`}
             alt={post.title}
@@ -63,7 +63,7 @@ export default async function PostPage({ params }: PostPageProps) {
       {/* Content */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+        <nav className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6">
           <Link href="/" className="hover:text-brand-accent transition-colors">
             Home
           </Link>
@@ -79,7 +79,7 @@ export default async function PostPage({ params }: PostPageProps) {
               <span>/</span>
             </>
           )}
-          <span className="text-gray-400 truncate">{post.title}</span>
+          <span className="text-gray-400 dark:text-gray-500 truncate">{post.title}</span>
         </nav>
 
         {/* Category Badge */}
@@ -94,13 +94,13 @@ export default async function PostPage({ params }: PostPageProps) {
         )}
 
         {/* Title */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight mb-6">
           {post.title}
         </h1>
 
         {/* Author Info */}
         {author && (
-          <div className="flex items-center gap-4 pb-8 mb-8 border-b border-gray-200">
+          <div className="flex items-center gap-4 pb-8 mb-8 border-b border-gray-200 dark:border-gray-700">
             <Link href={`/authors/${author.slug}`} className="shrink-0">
               {author.metadata?.avatar ? (
                 <img
@@ -111,7 +111,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   className="w-12 h-12 rounded-full object-cover"
                 />
               ) : (
-                <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-xl">
+                <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-xl">
                   ✍️
                 </div>
               )}
@@ -119,12 +119,12 @@ export default async function PostPage({ params }: PostPageProps) {
             <div>
               <Link
                 href={`/authors/${author.slug}`}
-                className="font-semibold text-gray-900 hover:text-brand-accent transition-colors"
+                className="font-semibold text-gray-900 dark:text-white hover:text-brand-accent transition-colors"
               >
                 {author.metadata?.name || author.title}
               </Link>
               {author.metadata?.bio && (
-                <p className="text-sm text-gray-500 mt-0.5 line-clamp-2">{author.metadata.bio}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-2">{author.metadata.bio}</p>
               )}
             </div>
           </div>
@@ -136,9 +136,9 @@ export default async function PostPage({ params }: PostPageProps) {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="bg-gray-50 py-12 mt-12">
+        <section className="bg-gray-50 dark:bg-gray-900 py-12 mt-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">More Stories</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">More Stories</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {relatedPosts.map((relatedPost) => {
                 const relImg = relatedPost.metadata?.featured_image
@@ -147,7 +147,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   <Link
                     key={relatedPost.id}
                     href={`/posts/${relatedPost.slug}`}
-                    className="group flex gap-4 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md transition-shadow"
+                    className="group flex gap-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:shadow-md transition-shadow"
                   >
                     {relImg ? (
                       <img
@@ -158,7 +158,7 @@ export default async function PostPage({ params }: PostPageProps) {
                         className="w-32 h-24 object-cover rounded-lg shrink-0"
                       />
                     ) : (
-                      <div className="w-32 h-24 bg-gray-100 rounded-lg shrink-0 flex items-center justify-center text-2xl">
+                      <div className="w-32 h-24 bg-gray-100 dark:bg-gray-700 rounded-lg shrink-0 flex items-center justify-center text-2xl">
                         📰
                       </div>
                     )}
@@ -168,7 +168,7 @@ export default async function PostPage({ params }: PostPageProps) {
                           {relCat.metadata?.name || relCat.title}
                         </span>
                       )}
-                      <h3 className="font-bold text-gray-900 group-hover:text-brand-accent transition-colors line-clamp-2">
+                      <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-brand-accent transition-colors line-clamp-2">
                         {relatedPost.title}
                       </h3>
                     </div>

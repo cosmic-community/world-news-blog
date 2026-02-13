@@ -19,10 +19,10 @@ export default async function CategoriesPage() {
         <span className="text-brand-accent font-semibold text-sm uppercase tracking-widest">
           Explore
         </span>
-        <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-2">
+        <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mt-2">
           All Categories
         </h1>
-        <p className="text-gray-600 mt-3 max-w-xl mx-auto">
+        <p className="text-gray-600 dark:text-gray-400 mt-3 max-w-xl mx-auto">
           Dive into world news organized by topic. Choose a category to read the latest stories.
         </p>
       </div>
@@ -64,7 +64,7 @@ export default async function CategoriesPage() {
           })}
         </div>
       ) : (
-        <div className="text-center py-20 text-gray-500">
+        <div className="text-center py-20 text-gray-500 dark:text-gray-400">
           <p className="text-lg">No categories found. Add some in your Cosmic dashboard.</p>
         </div>
       )}

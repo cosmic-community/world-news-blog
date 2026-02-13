@@ -17,10 +17,10 @@ export default async function AuthorsPage() {
         <span className="text-brand-accent font-semibold text-sm uppercase tracking-widest">
           Our Team
         </span>
-        <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-2">
+        <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mt-2">
           Meet the Authors
         </h1>
-        <p className="text-gray-600 mt-3 max-w-xl mx-auto">
+        <p className="text-gray-600 dark:text-gray-400 mt-3 max-w-xl mx-auto">
           The journalists and correspondents bringing you the latest world news.
         </p>
       </div>
@@ -33,7 +33,7 @@ export default async function AuthorsPage() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-20 text-gray-500">
+        <div className="text-center py-20 text-gray-500 dark:text-gray-400">
           <p className="text-lg">No authors found. Add some in your Cosmic dashboard.</p>
         </div>
       )}
